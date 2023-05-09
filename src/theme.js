@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 
 // color design tokens
 export const tokens = (mode) => ({
-    ...(mode === 'dark'
+    ...(mode === "dark"
     ? {
         grey: {
             100: "#e0e0e0",
@@ -125,9 +125,9 @@ export const themeSettings = (mode) => {
     const colors = tokens(mode)
     
     return {
-        pallette: {
+        palette: {
             mode: mode,
-            ...(mode === 'dark'
+            ...(mode === "dark"
               ? {
                 primary : {
                     main: colors.primary[500]
@@ -158,8 +158,8 @@ export const themeSettings = (mode) => {
                 },
                 background: {
                     default: '#fcfcfc',
-                }
-              })
+                },
+              }),
 
         },
         typography: {
@@ -200,11 +200,11 @@ export const ColorModeContext = createContext({
 })
 
 export const useMode = () => {
-    const [mode, setMode] = useState('dark')
+    const [mode, setMode] = useState("dark")
 
     const colorMode = useMemo(
         () => ({
-            toggleColorMode: () => setMode( (prev) => (prev === 'light' ? 'dark': 'light'))
+            toggleColorMode: () => setMode( (prev) => (prev === "light" ? "dark": "light"))
         }),
         []
     )

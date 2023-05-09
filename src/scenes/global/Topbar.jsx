@@ -26,7 +26,7 @@ export const Topbar = () => {
 
             <Box display="flex">
                 <IconButton onClick={colorMode.toggleColorMode}>
-                    {theme.pallete.mode === 'dark' ? (
+                    {theme.palette.mode === 'dark' ? (
                         <DarkModeOutlinedIcon/>
                     ) : (
                         <LightModeOutlinedIcon/>
